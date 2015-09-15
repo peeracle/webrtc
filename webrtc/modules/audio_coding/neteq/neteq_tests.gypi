@@ -26,7 +26,7 @@
           'target_name': 'neteq_rtpplay',
           'type': 'executable',
           'dependencies': [
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
             '<(webrtc_root)/test/test.gyp:test_support_main',
             'rtc_event_log_source',
             'neteq',
@@ -91,7 +91,7 @@
       'target_name': 'RTPjitter',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
       ],
       'sources': [
         'test/RTPjitter.cc',
@@ -102,8 +102,8 @@
       'target_name': 'rtp_analyze',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers_default',
         'neteq_unittest_tools',
       ],
@@ -116,7 +116,7 @@
       'target_name': 'RTPchange',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         'neteq_test_tools',
       ],
       'sources': [
@@ -128,7 +128,7 @@
       'target_name': 'RTPtimeshift',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         'neteq_test_tools',
       ],
       'sources': [
@@ -140,7 +140,7 @@
       'target_name': 'rtpcat',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         '<(webrtc_root)/test/test.gyp:rtp_test_utils',
       ],
       'sources': [
@@ -176,8 +176,8 @@
       'target_name': 'neteq_test_support',
       'type': 'static_library',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         'neteq',
         'neteq_unittest_tools',
         'pcm16b',
@@ -196,7 +196,7 @@
       'target_name': 'neteq_speed_test',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         '<(webrtc_root)/test/test.gyp:test_support_main',
         'neteq',
         'neteq_test_support',
@@ -210,8 +210,8 @@
       'target_name': 'neteq_opus_quality_test',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         '<(webrtc_root)/test/test.gyp:test_support_main',
         'neteq',
         'neteq_test_support',
@@ -226,8 +226,8 @@
       'target_name': 'neteq_isac_quality_test',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         '<(webrtc_root)/test/test.gyp:test_support_main',
         'isac_fix',
         'neteq',
@@ -242,8 +242,8 @@
       'target_name': 'neteq_pcmu_quality_test',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         '<(webrtc_root)/test/test.gyp:test_support_main',
         'g711',
         'neteq',
@@ -258,8 +258,8 @@
       'target_name': 'neteq_ilbc_quality_test',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         '<(webrtc_root)/test/test.gyp:test_support_main',
         'neteq',
         'neteq_test_support',
@@ -279,7 +279,7 @@
         'neteq_dummy_rtp%': 0,
       },
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         '<(webrtc_root)/common.gyp:webrtc_common',
         'cng',
         'g711',

@@ -1,7 +1,7 @@
 {
   'variables': {
     'variables': {
-      'webrtc_root%': '<(DEPTH)/webrtc',
+      'webrtc_root%': '<(webrtc_depth)/webrtc',
     },
     'webrtc_root%': '<(webrtc_root)',
     'build_with_chromium': 0,

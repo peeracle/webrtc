@@ -77,9 +77,9 @@ DIRECTORIES = [
   'tools/win',
 ]
 
-from sync_chromium import get_target_os_list
-target_os = get_target_os_list()
-if 'android' in target_os:
+#from sync_chromium import get_target_os_list
+#target_os = get_target_os_list()
+if 'OS=android' in os.getenv('GYP_DEFINES', ''):
   DIRECTORIES += [
     'base',
     'third_party/android_platform',
@@ -99,7 +99,7 @@ if 'android' in target_os:
     'tools/grit',
     'tools/relocation_packer'
   ]
-if 'ios' in target_os:
+if 'OS=ios' in os.getenv('GYP_DEFINES', ''):
   DIRECTORIES.append('third_party/class-dump')
 
 FILES = {

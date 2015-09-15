@@ -16,7 +16,7 @@
       'target_name': 'channel_transport',
       'type': 'static_library',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         '<(webrtc_root)/common.gyp:webrtc_common',
         '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers',
       ],
@@ -65,8 +65,8 @@
         'rtp_file_writer.h',
       ],
       'dependencies': [
-        '<(DEPTH)/webrtc/common.gyp:webrtc_common',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/webrtc/common.gyp:webrtc_common',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         '<(webrtc_root)/modules/modules.gyp:rtp_rtcp',
       ],
     },
@@ -103,16 +103,16 @@
       'dependencies': [
         'field_trial',
         'histogram',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
       ],
     },
     {
       'target_name': 'test_support',
       'type': 'static_library',
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/testing/gmock.gyp:gmock',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gmock.gyp:gmock',
         '<(webrtc_root)/common.gyp:gtest_prod',
         '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers',
       ],
@@ -151,9 +151,9 @@
         'field_trial',
         'histogram',
         'test_support',
-        '<(DEPTH)/testing/gmock.gyp:gmock',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gmock.gyp:gmock',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
       ],
       'sources': [
         'run_all_unittests.cc',
@@ -184,8 +184,8 @@
       'dependencies': [
         'channel_transport',
         'test_support_main',
-        '<(DEPTH)/testing/gmock.gyp:gmock',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gmock.gyp:gmock',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
       ],
       'sources': [
         'channel_transport/udp_transport_unittest.cc',
@@ -206,7 +206,7 @@
       'conditions': [
         ['OS=="android"', {
           'dependencies': [
-            '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+            '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
           ],
         }],
       ],

@@ -10,22 +10,22 @@
     ['OS=="linux" or OS=="mac" or OS=="win" or OS=="android"', {
       'variables': {
         'files': [
-          '<(DEPTH)/resources/audio_coding/testfile32kHz.pcm',
-          '<(DEPTH)/resources/audio_coding/teststereo32kHz.pcm',
-          '<(DEPTH)/resources/foreman_cif.yuv',
-          '<(DEPTH)/resources/paris_qcif.yuv',
+          '<(webrtc_depth)/resources/audio_coding/testfile32kHz.pcm',
+          '<(webrtc_depth)/resources/audio_coding/teststereo32kHz.pcm',
+          '<(webrtc_depth)/resources/foreman_cif.yuv',
+          '<(webrtc_depth)/resources/paris_qcif.yuv',
         ],
       },
     }],
     ['OS=="linux" or OS=="mac" or OS=="win"', {
       'variables': {
         'command': [
-          '<(DEPTH)/testing/test_env.py',
+          '<(webrtc_depth)/testing/test_env.py',
           '<(PRODUCT_DIR)/modules_tests<(EXECUTABLE_SUFFIX)',
         ],
         'files': [
-          '<(DEPTH)/DEPS',
-          '<(DEPTH)/testing/test_env.py',
+          '<(webrtc_depth)/DEPS',
+          '<(webrtc_depth)/testing/test_env.py',
           '<(PRODUCT_DIR)/modules_tests<(EXECUTABLE_SUFFIX)',
         ],
       },

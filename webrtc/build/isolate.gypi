@@ -60,15 +60,15 @@
       'extension': 'isolate',
       'inputs': [
         # Files that are known to be involved in this step.
-        '<(DEPTH)/tools/swarming_client/isolate.py',
-        '<(DEPTH)/tools/swarming_client/run_isolated.py',
+        '<(webrtc_depth)/tools/swarming_client/isolate.py',
+        '<(webrtc_depth)/tools/swarming_client/run_isolated.py',
       ],
       'outputs': [
         '<(PRODUCT_DIR)/<(RULE_INPUT_ROOT).isolated',
       ],
       'action': [
         'python',
-        '<(DEPTH)/tools/swarming_client/isolate.py',
+        '<(webrtc_depth)/tools/swarming_client/isolate.py',
         '<(test_isolation_mode)',
         '--result', '<@(_outputs)',
         '--isolate', '<(RULE_INPUT_PATH)',
@@ -82,7 +82,7 @@
 
         # Path variables are used to replace file paths when loading a .isolate
         # file
-        '--path-variable', 'DEPTH', '<(DEPTH)',
+        '--path-variable', 'DEPTH', '<(webrtc_depth)',
         '--path-variable', 'PRODUCT_DIR', '<(PRODUCT_DIR) ',
 
         '--config-variable', 'OS=<(OS)',

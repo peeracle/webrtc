@@ -1,0 +1,78 @@
+# Keep the "Exceptions" attribute, so the compiler knows which exceptions methods may throw.
+# Keep the "InnerClasses" attribute, so the compiler could find the inner classes.
+# Keep the "Signature" attribute, so the compiler could access generic types when compiling in JDK 5.0 and higher.
+-keepattributes Exceptions,InnerClasses,Signature
+
+# Keep all the classes in packages used by Chrome
+-keep public class com.google.android.gms.common.api.Api* {*;}
+-keep public class com.google.android.gms.common.api.CommonStatusCodes {*;}
+-keep public class com.google.android.gms.common.api.GoogleApiClient* {*;}
+-keep public class com.google.android.gms.common.api.PendingResult {*;}
+-keep public class com.google.android.gms.common.api.ResultCallback {*;}
+-keep public class com.google.android.gms.common.api.Status {*;}
+-keep public class com.google.android.gms.common.ConnectionResult {*;}
+-keep public class com.google.android.gms.common.GoogleApiAvailability {*;}
+-keep public class com.google.android.gms.common.GooglePlayServicesUtil {*;}
+
+
+-keep class com.google.android.gms.auth.*,             # Signin, chromoting
+            com.google.android.gms.cast.*,             # Cast
+            com.google.android.gms.gcm.*,              # GCM for CacheInvalidation
+            com.google.android.gms.iid.*               # GCM Registration for CacheInvalidation
+      {
+  *;
+}
+
+# Resources will be added in the later buildstep.
+-dontwarn com.google.android.gms.R**
+
+# appears to work. See http://crbug.com/485498
+-dontnote com.google.android.gms.cast.**
+-dontnote com.google.android.gms.common.**
+-dontnote com.google.android.gms.dynamic.**
+-dontnote com.google.android.gms.internal.**
+
+# Keep all enum values and valueOf methods. See
+# http://proguard.sourceforge.net/index.html#manual/examples.html
+# for the reason for this. Also, see http://crbug.com/248037.
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# Preserve sufficient information for simple Serializable classes.
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+# https://developer.android.com/google/play-services/setup.html#Proguard
+# From proguard.txt in GMS Core Client library
+-keep class * extends java.util.ListResourceBundle {
+    protected java.lang.Object[][] getContents();
+}
+
+# Keep SafeParcelable value, needed for reflection. This is required to support backwards
+# compatibility of some classes.
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+# Keep the names of classes/members we need for client functionality.
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+# Needed for Parcelable/SafeParcelable Creators to not get stripped
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# TODO(aurimas): remove this when Google Play Services no longer uses setLatestEventInfo call
+# that was deprecated in Android M. It is save to suppress this according to b/18510449.
+-dontwarn android.app.Notification

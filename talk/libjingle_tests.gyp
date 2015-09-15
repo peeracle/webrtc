@@ -37,18 +37,18 @@
       'direct_dependent_settings': {
         'include_dirs': [
           '<(libyuv_dir)/include',
-          '<(DEPTH)/testing/gtest/include',
-          '<(DEPTH)/testing/gtest',
+          '<(webrtc_depth)/testing/gtest/include',
+          '<(webrtc_depth)/testing/gtest',
         ],
       },
       'conditions': [
         ['build_libyuv==1', {
-          'dependencies': ['<(DEPTH)/third_party/libyuv/libyuv.gyp:libyuv',],
+          'dependencies': ['<(webrtc_depth)/third_party/libyuv/libyuv.gyp:libyuv',],
         }],
       ],
       'include_dirs': [
-         '<(DEPTH)/testing/gtest/include',
-         '<(DEPTH)/testing/gtest',
+         '<(webrtc_depth)/testing/gtest/include',
+         '<(webrtc_depth)/testing/gtest',
        ],
       'sources': [
         'media/base/fakecapturemanager.h',
@@ -114,9 +114,9 @@
           'conditions': [
             ['use_openssl==0', {
               'dependencies': [
-                '<(DEPTH)/net/third_party/nss/ssl.gyp:libssl',
-                '<(DEPTH)/third_party/nss/nss.gyp:nspr',
-                '<(DEPTH)/third_party/nss/nss.gyp:nss',
+                '<(webrtc_depth)/net/third_party/nss/ssl.gyp:libssl',
+                '<(webrtc_depth)/third_party/nss/nss.gyp:nspr',
+                '<(webrtc_depth)/third_party/nss/nss.gyp:nss',
               ],
             }],
           ],
@@ -148,7 +148,7 @@
         'libjingle_unittest_main',
       ],
       'include_dirs': [
-        '<(DEPTH)/third_party/libsrtp/srtp',
+        '<(webrtc_depth)/third_party/libsrtp/srtp',
       ],
       'sources': [
         'session/media/bundlefilter_unittest.cc',
@@ -162,7 +162,7 @@
       'conditions': [
         ['build_libsrtp==1', {
           'dependencies': [
-            '<(DEPTH)/third_party/libsrtp/libsrtp.gyp:libsrtp',
+            '<(webrtc_depth)/third_party/libsrtp/libsrtp.gyp:libsrtp',
           ],
         }],
         ['OS=="win"', {
@@ -180,7 +180,7 @@
       'target_name': 'libjingle_peerconnection_unittest',
       'type': 'executable',
       'dependencies': [
-        '<(DEPTH)/testing/gmock.gyp:gmock',
+        '<(webrtc_depth)/testing/gmock.gyp:gmock',
         '<(webrtc_root)/base/base_tests.gyp:rtc_base_tests_utils',
         '<(webrtc_root)/common.gyp:webrtc_common',
         'libjingle.gyp:libjingle',
@@ -190,7 +190,7 @@
       ],
       'direct_dependent_settings': {
         'include_dirs': [
-          '<(DEPTH)/testing/gmock/include',
+          '<(webrtc_depth)/testing/gmock/include',
         ],
       },
       'sources': [
@@ -250,7 +250,7 @@
   'conditions': [
     ['OS=="linux"', {
       'variables': {
-        'junit_jar': '<(DEPTH)/third_party/junit-jar/junit-4.11.jar',
+        'junit_jar': '<(webrtc_depth)/third_party/junit-jar/junit-4.11.jar',
       },
       'targets': [
         {
@@ -378,7 +378,7 @@
           'includes': [ 'build/objc_app.gypi' ],
           'dependencies': [
             '<(webrtc_root)/base/base_tests.gyp:rtc_base_tests_utils',
-            '<(DEPTH)/third_party/ocmock/ocmock.gyp:ocmock',
+            '<(webrtc_depth)/third_party/ocmock/ocmock.gyp:ocmock',
             '<(webrtc_root)/libjingle_examples.gyp:apprtc_signaling',
           ],
           'sources': [

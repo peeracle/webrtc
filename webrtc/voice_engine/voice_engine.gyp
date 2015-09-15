@@ -107,8 +107,8 @@
           'type': '<(gtest_target_type)',
           'dependencies': [
             'voice_engine',
-            '<(DEPTH)/testing/gmock.gyp:gmock',
-            '<(DEPTH)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/testing/gmock.gyp:gmock',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
             # The rest are to satisfy the unittests' include chain.
             # This would be unnecessary if we used qualified includes.
             '<(webrtc_root)/common_audio/common_audio.gyp:common_audio',
@@ -137,7 +137,7 @@
           'conditions': [
             ['OS=="android"', {
               'dependencies': [
-                '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+                '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
               ],
             }],
           ],
@@ -147,9 +147,9 @@
           'type': 'executable',
           'dependencies': [
             'voice_engine',
-            '<(DEPTH)/testing/gmock.gyp:gmock',
-            '<(DEPTH)/testing/gtest.gyp:gtest',
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/testing/gmock.gyp:gmock',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers_default',
             '<(webrtc_root)/test/test.gyp:channel_transport',
@@ -227,8 +227,8 @@
           'type': 'executable',
           'dependencies': [
             'voice_engine',
-            '<(DEPTH)/testing/gtest.gyp:gtest',
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers_default',
             '<(webrtc_root)/test/test.gyp:channel_transport',

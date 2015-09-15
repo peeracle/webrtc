@@ -473,7 +473,7 @@
           'conditions': [
             ['build_json==1', {
               'dependencies': [
-                '<(DEPTH)/third_party/jsoncpp/jsoncpp.gyp:jsoncpp',
+                '<(webrtc_depth)/third_party/jsoncpp/jsoncpp.gyp:jsoncpp',
               ],
             }, {
               'include_dirs': [
@@ -518,7 +518,7 @@
           'conditions': [
             ['build_ssl==1', {
               'dependencies': [
-                '<(DEPTH)/third_party/boringssl/boringssl.gyp:boringssl',
+                '<(webrtc_depth)/third_party/boringssl/boringssl.gyp:boringssl',
               ],
             }, {
               'include_dirs': [
@@ -554,14 +554,14 @@
                 # it's pulled from the system.
                 ['OS == "mac" or OS == "ios"', {
                   'dependencies': [
-                    '<(DEPTH)/net/third_party/nss/ssl.gyp:libssl',
-                    '<(DEPTH)/third_party/nss/nss.gyp:nspr',
-                    '<(DEPTH)/third_party/nss/nss.gyp:nss',
+                    '<(webrtc_depth)/net/third_party/nss/ssl.gyp:libssl',
+                    '<(webrtc_depth)/third_party/nss/nss.gyp:nspr',
+                    '<(webrtc_depth)/third_party/nss/nss.gyp:nss',
                   ],
                 }],
                 ['os_posix == 1 and OS != "mac" and OS != "ios" and OS != "android"', {
                   'dependencies': [
-                    '<(DEPTH)/build/linux/system.gyp:ssl',
+                    '<(webrtc_depth)/build/linux/system.gyp:ssl',
                   ],
                 }],
               ],

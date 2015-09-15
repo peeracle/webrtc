@@ -29,7 +29,7 @@
           'conditions': [
             ['build_icu==1', {
               'dependencies': [
-                '<(DEPTH)/third_party/icu/icu.gyp:icuuc',
+                '<(webrtc_depth)/third_party/icu/icu.gyp:icuuc',
               ],
             }],
           ],

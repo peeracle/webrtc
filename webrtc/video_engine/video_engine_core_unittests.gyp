@@ -18,8 +18,8 @@
         '<(webrtc_root)/webrtc.gyp:webrtc',
         '<(webrtc_root)/modules/modules.gyp:video_capture_module_internal_impl',
         '<(webrtc_root)/modules/modules.gyp:video_render_module_internal_impl',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/testing/gmock.gyp:gmock',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gmock.gyp:gmock',
         '<(webrtc_root)/test/test.gyp:test_support_main',
       ],
       'sources': [
@@ -35,7 +35,7 @@
       'conditions': [
         ['OS=="android"', {
           'dependencies': [
-            '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+            '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
           ],
         }],
       ],

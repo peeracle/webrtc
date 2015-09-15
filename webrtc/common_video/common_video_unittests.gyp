@@ -14,7 +14,7 @@
       'type': '<(gtest_target_type)',
       'dependencies': [
          '<(webrtc_root)/common_video/common_video.gyp:common_video',
-         '<(DEPTH)/testing/gtest.gyp:gtest',
+         '<(webrtc_depth)/testing/gtest.gyp:gtest',
          '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers',
          '<(webrtc_root)/test/test.gyp:test_support_main',
       ],
@@ -31,7 +31,7 @@
       'conditions': [
         ['OS=="android"', {
           'dependencies': [
-            '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+            '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
           ],
         }],
       ],

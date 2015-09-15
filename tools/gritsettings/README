@@ -3,5 +3,5 @@ resource file being located here in the Chromium build toolchain.
 
 This is only needed for our Android native tests to be able to include the
 build/apk_test.gypi GYP file and depend on the
-<(DEPTH)/testing/android/native_test.gyp:native_test_native_code target in
+<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code target in
 Chromium.

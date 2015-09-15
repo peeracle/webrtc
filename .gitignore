@@ -42,7 +42,10 @@
 /chromium/.gclient.tmp_entries
 /chromium/.last_sync_chromium
 /chromium/_bad_scm
-/chromium/src
+/chromium/src/third_party/android_ndk
+/chromium/src/third_party/android_sdk
+/chromium/src/third_party/llvm
+/chromium/src/third_party/llvm-build
 /google_apis
 /gyp-mac-tool
 /isolate_deps_dir
@@ -78,7 +81,9 @@
 /talk/app/webrtc/androidtests/libs
 /testing
 /third_party/WebKit/Tools/Scripts
+/third_party/android_ndk
 /third_party/android_platform
+/third_party/android_sdk
 /third_party/android_testrunner
 /third_party/android_tools
 /third_party/appurify-python
@@ -95,7 +100,6 @@
 /third_party/drmemory
 /third_party/expat
 /third_party/gaeunit
-/third_party/gflags/src
 /third_party/google-visualization-python
 /third_party/icu
 /third_party/instrumented_libraries
@@ -132,7 +136,6 @@
 /third_party/syzygy
 /third_party/usrsctp
 /third_party/valgrind
-/third_party/winsdk_samples/src
 /third_party/yasm
 /third_party/zlib
 /tools/android

@@ -1,0 +1,6 @@
+*.pyc
+sdk/extras/google/google_play_services
+sdk/extras/google_google_play_services_*.zip
+sdk/system-images
+sdk/tools/lib/monitor-x86/configuration/org.eclipse.update/platform.xml
+sdk/tools/lib/monitor-x86_64/configuration/org.eclipse.update/platform.xml

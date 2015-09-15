@@ -10,7 +10,7 @@
   'variables': {
     'include_examples%': 1,
     'include_tests%': 1,
-    'webrtc_root_additional_dependencies': [],
+    'webrtc_root_additional_dependencies': []
   },
   'targets': [
     {

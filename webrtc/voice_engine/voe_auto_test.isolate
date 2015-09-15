@@ -10,11 +10,11 @@
     ['OS=="linux" or OS=="mac" or OS=="win"', {
       'variables': {
         'command': [
-          '<(DEPTH)/testing/test_env.py',
+          '<(webrtc_depth)/testing/test_env.py',
           '<(PRODUCT_DIR)/voe_auto_test<(EXECUTABLE_SUFFIX)',
         ],
         'files': [
-          '<(DEPTH)/testing/test_env.py',
+          '<(webrtc_depth)/testing/test_env.py',
           '<(PRODUCT_DIR)/voe_auto_test<(EXECUTABLE_SUFFIX)',
         ],
       },

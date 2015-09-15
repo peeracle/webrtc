@@ -1,0 +1,17 @@
+############################################################
+## This is project specific .gitignore file
+## Add your personal rules inside .git/info/exclude
+############################################################
+
+# pyc files
+*.pyc
+appurify.egg-info/
+
+# cover
+.coverage
+cover/
+
+.project
+.pydevproject
+build/
+dist/*.egg

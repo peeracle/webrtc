@@ -63,7 +63,7 @@
           'target_name': 'bwe_simulator',
           'type': 'static_library',
           'dependencies': [
-            '<(DEPTH)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
           ],
           'sources': [
             'test/bwe.cc',
@@ -111,7 +111,7 @@
           'target_name': 'bwe_tools_util',
           'type': 'static_library',
           'dependencies': [
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers',
             'rtp_rtcp',
           ],

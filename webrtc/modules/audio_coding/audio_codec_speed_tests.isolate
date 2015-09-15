@@ -10,21 +10,21 @@
     ['OS=="linux" or OS=="mac" or OS=="win" or OS=="android"', {
       'variables': {
         'files': [
-          '<(DEPTH)/resources/audio_coding/music_stereo_48kHz.pcm',
-          '<(DEPTH)/resources/audio_coding/speech_mono_16kHz.pcm',
-          '<(DEPTH)/resources/audio_coding/speech_mono_32_48kHz.pcm',
+          '<(webrtc_depth)/resources/audio_coding/music_stereo_48kHz.pcm',
+          '<(webrtc_depth)/resources/audio_coding/speech_mono_16kHz.pcm',
+          '<(webrtc_depth)/resources/audio_coding/speech_mono_32_48kHz.pcm',
         ],
       },
     }],
     ['OS=="linux" or OS=="mac" or OS=="win"', {
       'variables': {
         'command': [
-          '<(DEPTH)/testing/test_env.py',
+          '<(webrtc_depth)/testing/test_env.py',
           '<(PRODUCT_DIR)/audio_codec_speed_tests<(EXECUTABLE_SUFFIX)',
         ],
         'files': [
-          '<(DEPTH)/DEPS',
-          '<(DEPTH)/testing/test_env.py',
+          '<(webrtc_depth)/DEPS',
+          '<(webrtc_depth)/testing/test_env.py',
           '<(PRODUCT_DIR)/audio_codec_speed_tests<(EXECUTABLE_SUFFIX)',
         ],
       },

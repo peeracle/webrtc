@@ -105,7 +105,7 @@ static std::string GetThreadId() {
   char buf[21];  // Big enough to hold a kuint64max plus terminating NULL.
   CHECK_LT(snprintf(buf, sizeof(buf), "%ld",
            static_cast<long>(syscall(__NR_gettid))),
-           sizeof(buf))
+           static_cast<int>(sizeof(buf)))
       << "Thread id is bigger than uint64??";
   return std::string(buf);
 }

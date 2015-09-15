@@ -86,7 +86,7 @@
           'conditions': [
             ['build_json==1', {
               'dependencies': [
-                '<(DEPTH)/third_party/jsoncpp/jsoncpp.gyp:jsoncpp',
+                '<(webrtc_depth)/third_party/jsoncpp/jsoncpp.gyp:jsoncpp',
               ],
             }],
             # TODO(ronghuawu): Move these files to a win/ directory then they
@@ -296,7 +296,7 @@
             }],
             ['target_arch=="ia32"', {
               'dependencies' : [
-                '<(DEPTH)/testing/iossim/iossim.gyp:iossim#host',
+                '<(webrtc_depth)/testing/iossim/iossim.gyp:iossim#host',
               ],
             }],
           ],

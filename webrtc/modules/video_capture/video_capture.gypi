@@ -92,7 +92,7 @@
             }],  # mac
             ['OS=="win"', {
               'dependencies': [
-                '<(DEPTH)/third_party/winsdk_samples/winsdk_samples.gyp:directshow_baseclasses',
+                '<(webrtc_depth)/third_party/winsdk_samples/winsdk_samples.gyp:directshow_baseclasses',
               ],
               'sources': [
                 'windows/device_info_ds.cc',
@@ -125,12 +125,12 @@
               'conditions': [
                 ['build_json==1', {
                   'dependencies': [
-                    '<(DEPTH)/third_party/jsoncpp/jsoncpp.gyp:jsoncpp',
+                    '<(webrtc_depth)/third_party/jsoncpp/jsoncpp.gyp:jsoncpp',
                   ],
                 }],
                 ['build_icu==1', {
                   'dependencies': [
-                    '<(DEPTH)/third_party/icu/icu.gyp:icuuc',
+                    '<(webrtc_depth)/third_party/icu/icu.gyp:icuuc',
                   ],
                 }],
               ],
@@ -174,7 +174,7 @@
             'video_capture_module_internal_impl',
             'webrtc_utility',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers',
-            '<(DEPTH)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
           ],
           'sources': [
             'ensure_initialized.cc',
@@ -200,7 +200,7 @@
             }],
             ['OS=="android"', {
               'dependencies': [
-                '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+                '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
               ],
               # Need to disable error due to the line in
               # base/android/jni_android.h triggering it:

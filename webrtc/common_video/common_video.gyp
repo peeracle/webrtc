@@ -29,9 +29,9 @@
       },
       'conditions': [
         ['build_libyuv==1', {
-          'dependencies': ['<(DEPTH)/third_party/libyuv/libyuv.gyp:libyuv',],
+          'dependencies': ['<(webrtc_depth)/third_party/libyuv/libyuv.gyp:libyuv',],
           'export_dependent_settings': [
-            '<(DEPTH)/third_party/libyuv/libyuv.gyp:libyuv',
+            '<(webrtc_depth)/third_party/libyuv/libyuv.gyp:libyuv',
           ],
         }, {
           # Need to add a directory normally exported by libyuv.gyp.

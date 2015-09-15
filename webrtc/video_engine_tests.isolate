@@ -10,7 +10,7 @@
     ['OS=="linux" or OS=="mac" or OS=="win" or OS=="android"', {
       'variables': {
         'files': [
-          '<(DEPTH)/resources/foreman_cif_short.yuv',
+          '<(webrtc_depth)/resources/foreman_cif_short.yuv',
         ],
       },
     }],
@@ -20,7 +20,7 @@
           '<(PRODUCT_DIR)/video_engine_tests<(EXECUTABLE_SUFFIX)',
         ],
         'files': [
-          '<(DEPTH)/DEPS',
+          '<(webrtc_depth)/DEPS',
           '<(PRODUCT_DIR)/video_engine_tests<(EXECUTABLE_SUFFIX)',
         ],
       },

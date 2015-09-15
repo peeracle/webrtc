@@ -37,7 +37,7 @@
           'target_name': 'webrtc_h264_video_toolbox',
           'type': 'static_library',
           'dependencies': [
-            '<(DEPTH)/third_party/libyuv/libyuv.gyp:libyuv',
+            '<(webrtc_depth)/third_party/libyuv/libyuv.gyp:libyuv',
           ],
           'link_settings': {
             'xcode_settings': {

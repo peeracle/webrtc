@@ -10,15 +10,15 @@
     ['OS=="linux" or OS=="mac" or OS=="win" or OS=="android"', {
       'variables': {
         'files': [
-          '<(DEPTH)/resources/foreman_cif.yuv',
-          '<(DEPTH)/resources/paris_qcif.yuv',
-          '<(DEPTH)/resources/voice_engine/audio_long16.pcm',
-          '<(DEPTH)/resources/difficult_photo_1850_1110.yuv',
-          '<(DEPTH)/resources/photo_1850_1110.yuv',
-          '<(DEPTH)/resources/presentation_1850_1110.yuv',
-          '<(DEPTH)/resources/web_screenshot_1850_1110.yuv',
-          '<(DEPTH)/resources/google-wifi-3mbps.rx',
-          '<(DEPTH)/resources/verizon4g-downlink.rx',
+          '<(webrtc_depth)/resources/foreman_cif.yuv',
+          '<(webrtc_depth)/resources/paris_qcif.yuv',
+          '<(webrtc_depth)/resources/voice_engine/audio_long16.pcm',
+          '<(webrtc_depth)/resources/difficult_photo_1850_1110.yuv',
+          '<(webrtc_depth)/resources/photo_1850_1110.yuv',
+          '<(webrtc_depth)/resources/presentation_1850_1110.yuv',
+          '<(webrtc_depth)/resources/web_screenshot_1850_1110.yuv',
+          '<(webrtc_depth)/resources/google-wifi-3mbps.rx',
+          '<(webrtc_depth)/resources/verizon4g-downlink.rx',
         ],
       },
     }],
@@ -28,7 +28,7 @@
           '<(PRODUCT_DIR)/webrtc_perf_tests<(EXECUTABLE_SUFFIX)',
         ],
         'files': [
-          '<(DEPTH)/DEPS',
+          '<(webrtc_depth)/DEPS',
           '<(PRODUCT_DIR)/webrtc_perf_tests<(EXECUTABLE_SUFFIX)',
         ],
       },

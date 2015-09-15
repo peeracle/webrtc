@@ -16,7 +16,7 @@
           'dependencies': [
             'video_codecs_test_framework',
             'webrtc_video_coding',
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
             '<(webrtc_root)/common.gyp:webrtc_common',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers_default',
             '<(webrtc_root)/test/metrics.gyp:metrics',

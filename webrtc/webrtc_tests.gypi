@@ -23,13 +23,13 @@
         'rtc_xmllite_unittest',
         'rtc_xmpp_unittest',
         'sound/sound.gyp:rtc_sound',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/testing/gmock.gyp:gmock',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gmock.gyp:gmock',
       ],
       'conditions': [
         ['OS=="android"', {
           'dependencies': [
-            '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+            '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
           ],
         }],
       ],
@@ -62,8 +62,8 @@
         }],
       ],
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         '<(webrtc_root)/modules/modules.gyp:video_capture',
         'test/webrtc_test_common.gyp:webrtc_test_common',
         'test/test.gyp:test_main',
@@ -78,7 +78,7 @@
         'video/loopback.h',
       ],
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         '<(webrtc_root)/modules/modules.gyp:video_capture_module_internal_impl',
         '<(webrtc_root)/modules/modules.gyp:video_render',
         '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers',
@@ -103,8 +103,8 @@
       ],
       'dependencies': [
         'loopback_base',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         'test/webrtc_test_common.gyp:webrtc_test_common',
         'test/webrtc_test_common.gyp:webrtc_test_renderer',
         'test/test.gyp:test_main',
@@ -129,8 +129,8 @@
       ],
       'dependencies': [
         'loopback_base',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         'test/webrtc_test_common.gyp:webrtc_test_common',
         'test/webrtc_test_common.gyp:webrtc_test_renderer',
         'test/test.gyp:test_main',
@@ -154,8 +154,8 @@
         }],
       ],
       'dependencies': [
-        '<(DEPTH)/testing/gtest.gyp:gtest',
-        '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
         'test/webrtc_test_common.gyp:webrtc_test_common',
         'test/webrtc_test_common.gyp:webrtc_test_renderer',
         '<(webrtc_root)/modules/modules.gyp:video_capture',
@@ -183,8 +183,8 @@
         'video/video_send_stream_tests.cc',
       ],
       'dependencies': [
-        '<(DEPTH)/testing/gmock.gyp:gmock',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gmock.gyp:gmock',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         '<(webrtc_root)/common.gyp:webrtc_common',
         '<(webrtc_root)/modules/modules.gyp:rtp_rtcp',
         '<(webrtc_root)/modules/modules.gyp:video_capture',
@@ -200,7 +200,7 @@
       'conditions': [
         ['OS=="android"', {
           'dependencies': [
-            '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+            '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
           ],
         }],
         ['enable_protobuf==1', {
@@ -231,8 +231,8 @@
         'video/rampup_tests.h',
       ],
       'dependencies': [
-        '<(DEPTH)/testing/gmock.gyp:gmock',
-        '<(DEPTH)/testing/gtest.gyp:gtest',
+        '<(webrtc_depth)/testing/gmock.gyp:gmock',
+        '<(webrtc_depth)/testing/gtest.gyp:gtest',
         '<(webrtc_root)/modules/modules.gyp:video_capture',
         '<(webrtc_root)/test/test.gyp:channel_transport',
         '<(webrtc_root)/voice_engine/voice_engine.gyp:voice_engine',
@@ -247,7 +247,7 @@
       'conditions': [
         ['OS=="android"', {
           'dependencies': [
-            '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+            '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
           ],
         }],
       ],

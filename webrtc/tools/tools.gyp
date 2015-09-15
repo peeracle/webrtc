@@ -126,8 +126,8 @@
           'target_name': 'agc_harness',
           'type': 'executable',
           'dependencies': [
-            '<(DEPTH)/testing/gtest.gyp:gtest',
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers_default',
             '<(webrtc_root)/test/test.gyp:channel_transport',
             '<(webrtc_root)/test/test.gyp:test_support',
@@ -141,9 +141,9 @@
           'target_name': 'agc_proc',
           'type': 'executable',
           'dependencies': [
-            '<(DEPTH)/testing/gmock.gyp:gmock',
-            '<(DEPTH)/testing/gtest.gyp:gtest',
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/testing/gmock.gyp:gmock',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
             '<(webrtc_root)/test/test.gyp:test_support',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers_default',
             'agc_manager',
@@ -157,8 +157,8 @@
           'target_name': 'activity_metric',
           'type': 'executable',
           'dependencies': [
-            '<(DEPTH)/testing/gtest.gyp:gtest',
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
             'agc_manager',
           ],
           'sources': [
@@ -172,8 +172,8 @@
             '<(webrtc_root)/test/test.gyp:channel_transport',
             '<(webrtc_root)/voice_engine/voice_engine.gyp:voice_engine',
             '<(webrtc_root)/system_wrappers/system_wrappers.gyp:system_wrappers_default',
-            '<(DEPTH)/testing/gtest.gyp:gtest',
-            '<(DEPTH)/third_party/gflags/gflags.gyp:gflags',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/third_party/gflags/gflags.gyp:gflags',
           ],
           'sources': [
             'e2e_quality/audio/audio_e2e_harness.cc',
@@ -187,7 +187,7 @@
             'video_quality_analysis',
             '<(webrtc_root)/tools/internal_tools.gyp:command_line_parser',
             '<(webrtc_root)/test/test.gyp:test_support_main',
-            '<(DEPTH)/testing/gtest.gyp:gtest',
+            '<(webrtc_depth)/testing/gtest.gyp:gtest',
           ],
           'sources': [
             'simple_command_line_parser_unittest.cc',
@@ -201,7 +201,7 @@
           'conditions': [
             ['OS=="android"', {
               'dependencies': [
-                '<(DEPTH)/testing/android/native_test.gyp:native_test_native_code',
+                '<(webrtc_depth)/testing/android/native_test.gyp:native_test_native_code',
               ],
             }],
           ],

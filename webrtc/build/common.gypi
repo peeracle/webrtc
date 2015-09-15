@@ -22,14 +22,14 @@
         'conditions': [
           ['build_with_chromium==1', {
             'build_with_libjingle': 1,
-            'webrtc_root%': '<(DEPTH)/third_party/webrtc',
-            'apk_tests_path%': '<(DEPTH)/third_party/webrtc/build/apk_tests_noop.gyp',
-            'modules_java_gyp_path%': '<(DEPTH)/third_party/webrtc/modules/modules_java_chromium.gyp',
+            'webrtc_root%': '<(webrtc_depth)/third_party/webrtc',
+            'apk_tests_path%': '<(webrtc_depth)/third_party/webrtc/build/apk_tests_noop.gyp',
+            'modules_java_gyp_path%': '<(webrtc_depth)/third_party/webrtc/modules/modules_java_chromium.gyp',
           }, {
             'build_with_libjingle%': 0,
-            'webrtc_root%': '<(DEPTH)/webrtc',
-            'apk_tests_path%': '<(DEPTH)/webrtc/build/apk_tests.gyp',
-            'modules_java_gyp_path%': '<(DEPTH)/webrtc/modules/modules_java.gyp',
+            'webrtc_root%': '<(webrtc_depth)/webrtc',
+            'apk_tests_path%': '<(webrtc_depth)/webrtc/build/apk_tests.gyp',
+            'modules_java_gyp_path%': '<(webrtc_depth)/webrtc/modules/modules_java.gyp',
           }],
         ],
       },
@@ -41,7 +41,7 @@
       'webrtc_vp8_dir%': '<(webrtc_root)/modules/video_coding/codecs/vp8',
       'webrtc_vp9_dir%': '<(webrtc_root)/modules/video_coding/codecs/vp9',
       'include_opus%': 1,
-      'opus_dir%': '<(DEPTH)/third_party/opus',
+      'opus_dir%': '<(webrtc_depth)/third_party/opus',
     },
     'build_with_chromium%': '<(build_with_chromium)',
     'build_with_libjingle%': '<(build_with_libjingle)',
@@ -53,7 +53,7 @@
     'include_opus%': '<(include_opus)',
     'rtc_relative_path%': 1,
     'external_libraries%': '0',
-    'json_root%': '<(DEPTH)/third_party/jsoncpp/source/include/',
+    'json_root%': '<(webrtc_depth)/third_party/jsoncpp/source/include/',
     # openssl needs to be defined or gyp will complain. Is is only used when
     # when providing external libraries so just use current directory as a
     # placeholder.
@@ -102,8 +102,8 @@
     'build_with_mozilla%': 0,
 
     # Make it possible to provide custom locations for some libraries.
-    'libvpx_dir%': '<(DEPTH)/third_party/libvpx',
-    'libyuv_dir%': '<(DEPTH)/third_party/libyuv',
+    'libvpx_dir%': '<(webrtc_depth)/third_party/libvpx',
+    'libyuv_dir%': '<(webrtc_depth)/third_party/libyuv',
     'opus_dir%': '<(opus_dir)',
 
     # Use Java based audio layer as default for Android.
@@ -220,7 +220,7 @@
         'include_dirs': [
           # Include the top-level directory when building in Chrome, so we can
           # use full paths (e.g. headers inside testing/ or third_party/).
-          '<(DEPTH)',
+          '<(webrtc_depth)',
           # The overrides must be included before the WebRTC root as that's the
           # mechanism for selecting the override headers in Chromium.
           '../overrides',

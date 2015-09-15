@@ -22,7 +22,7 @@
       'conditions': [
         ['build_expat==1', {
           'dependencies': [
-            '<(DEPTH)/third_party/expat/expat.gyp:expat',
+            '<(webrtc_depth)/third_party/expat/expat.gyp:expat',
           ],
         }],
       ],

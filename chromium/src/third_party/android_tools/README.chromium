@@ -1,0 +1,41 @@
+Name: Android Tools (SDK/NDK)
+URL: http://developer.android.com/sdk/index.html
+Versions:
+  NDK r10e-rc4
+  Android SDK Platform API 23
+  Android SDK Tools 24.3.4
+  Android SDK Platform-tools 23
+  Android SDK Build-tools 23
+  Android SDK Sources 23
+  Android Support Library 23.0.0
+  Google Cloud Messaging 3
+Security Critical: no
+License: Apache Version 2.0
+
+Description:
+The Android SDK/NDK provide API libraries and developer tools necessary to
+build, test and debug for Android.
+
+Local Modifications:
+
+-In ndk/
+- Removed old android platforms in platforms/
+  (anything under android-16)
+- Cherry-picked
+    https://android-review.googlesource.com/#/c/150680/
+  to fix component build at -Oz.
+- Cherry-picked various upstream libc++ fixes, including stack trace fixes.
+    https://android-review.googlesource.com/#/c/152910
+
+-In sdk/
+- Included the Android support library and required extras packages
+- Added proguard.flags
+- Removed unused resources from the support library (see crbug.com/372481)
+- Updated trace-viewer script to r220 under sdk/tools/systrace.
+  Steps to update to the latest version of trace-viewer:
+    git clone https://android.googlesource.com/platform/external/chromium-trace
+    cd chromium-trace
+    ./update.py
+    cp script.js style.css $ANDROID_SDK_ROOT/tools/systrace
+
+No other modifications has been made to the public Android SDK/NDK.
