@@ -33,7 +33,7 @@
  *
  * detoken is used to convert the line back to text
  */
-#include <util.h>
+#include <yasm_util.h>
 #include <libyasm-stdint.h>
 #include <libyasm/coretype.h>
 #include <libyasm/intnum.h>

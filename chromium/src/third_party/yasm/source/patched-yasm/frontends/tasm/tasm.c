@@ -25,7 +25,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-#include <util.h>
+#include <yasm_util.h>
 
 #include <ctype.h>
 #include <libyasm/compat-queue.h>

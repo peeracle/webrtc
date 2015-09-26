@@ -90,7 +90,7 @@
 
 */
 
-#include <util.h>
+#include <yasm_util.h>
 
 #include <libyasm.h>
 

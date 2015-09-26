@@ -5,7 +5,7 @@
  * redistributable under the licence given in the file "Licence"
  * distributed in the NASM archive.
  */
-#include <util.h>
+#include <yasm_util.h>
 #include <libyasm/coretype.h>
 #include <libyasm/intnum.h>
 #include <ctype.h>

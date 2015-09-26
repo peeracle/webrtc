@@ -1,5 +1,5 @@
 /* Modified for use with yasm by Peter Johnson. */
-#include "util.h"
+#include "yasm_util.h"
 
 /*
 --------------------------------------------------------------------

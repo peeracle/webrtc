@@ -24,7 +24,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-#include <util.h>
+#include <yasm_util.h>
 
 /* Need either unistd.h or direct.h to prototype getcwd() and mkdir() */
 #ifdef HAVE_UNISTD_H

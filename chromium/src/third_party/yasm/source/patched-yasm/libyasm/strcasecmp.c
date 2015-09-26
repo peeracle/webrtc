@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-#include "util.h"
+#include "yasm_util.h"
 
 #ifndef USE_OUR_OWN_STRCASECMP
 #undef yasm__strcasecmp

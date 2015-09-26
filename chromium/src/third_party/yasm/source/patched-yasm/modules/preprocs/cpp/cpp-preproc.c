@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <util.h>
+#include <yasm_util.h>
 #include <libyasm.h>
 
 /* TODO: Use autoconf to get the limit on the command line length. */

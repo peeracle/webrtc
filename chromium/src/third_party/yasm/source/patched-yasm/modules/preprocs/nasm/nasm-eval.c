@@ -7,7 +7,7 @@
  *
  * initial version 27/iii/95 by Simon Tatham
  */
-#include <util.h>
+#include <yasm_util.h>
 #include <libyasm-stdint.h>
 #include <libyasm/coretype.h>
 #include <libyasm/intnum.h>

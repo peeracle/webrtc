@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  */
 #define NO_STRING_INLINES
-#include "util.h"
+#include "yasm_util.h"
 
 
 #if defined(LIBC_SCCS) && !defined(lint)

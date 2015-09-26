@@ -27,7 +27,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "util.h"
+#include "yasm_util.h"
 #include "libyasm/errwarn.h"
 #include "libyasm/file.h"
 

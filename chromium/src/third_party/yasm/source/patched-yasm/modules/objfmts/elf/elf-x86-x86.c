@@ -25,7 +25,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <util.h>
+#include <yasm_util.h>
 
 #include <libyasm.h>
 #define YASM_OBJFMT_ELF_INTERNAL
