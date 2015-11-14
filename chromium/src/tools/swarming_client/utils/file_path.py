@@ -74,8 +74,10 @@ if sys.platform == 'win32':
     err = GetLastError()
     if err:
       # pylint: disable=E0602
-      msg = u'GetShortPathName(%s): %s (%d)' % (
-            long_path, FormatError(err), err)
+      #msg = u'GetShortPathName(%s): %s (%d)' % (
+      #      long_path, FormatError(err), err)
+      msg = u'GetShortPathName(%s): (%d)' % (
+            long_path, err)
       raise WindowsError(err, msg.encode('utf-8'))
 
 
